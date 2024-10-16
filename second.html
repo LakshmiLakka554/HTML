@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Jobs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Apply for Jobs</h1>
+
+    <form id="applyJobForm">
+        <label for="first_name">First Name*</label>
+        <input type="text" id="first_name" name="first_name">
+
+        <label for="last_name">Last Name*</label>
+        <input type="text" id="last_name" name="last_name">
+
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email">
+
+        <label for="phone">Phone*</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="address">Address*</label>
+        <input type="text" id="address" name="address">
+
+        <label for="city">City*</label>
+        <input type="text" id="city" name="city">
+
+        <label for="state">State*</label>
+        <input type="text" id="state" name="state">
+
+        <label for="zip">ZIP Code*</label>
+        <input type="text" id="zip" name="zip">
+
+        <label for="country">Country*</label>
+        <select id="country" name="country">
+            <option value="">Select Country</option>
+            <option value="US">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+            <option value="India">India</option>
+        </select>
+
+        <label for="edu_level">Education Level*</label>
+        <select id="edu_level" name="edu_level">
+            <option value="">Select Education Level</option>
+            <option value="High School">High School</option>
+            <option value="Bachelor's">Bachelor's</option>
+            <option value="Master's">Master's</option>
+            <option value="PhD">PhD</option>
+        </select>
+
+        <label for="edu_type">Education Type*</label>
+        <select id="edu_type" name="edu_type">
+            <option value="">Select Education Type</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+        </select>
+
+        <label for="resume">Resume (PDF)*</label>
+        <input type="file" id="resume" name="resume" accept=".pdf">
+
+        <label for="cover_letter">Cover Letter (optional)</label>
+        <textarea id="cover_letter" name="cover_letter" rows="4"></textarea>
+
+        <label for="employed_flag">
+            <input type="checkbox" id="employed_flag" name="employed_flag"> Are you employed?
+        </label>
+
+        <div id="employed_details" style="display: none;">
+            <label for="current_employer_name">Current Employer</label>
+            <input type="text" id="current_employer_name" name="current_employer_name">
+
+            <label for="years_of_exp">Years of Experience</label>
+            <input type="number" id="years_of_exp" name="years_of_exp" min="0">
+        </div>
+
+        <label for="jobs">Jobs you want to apply for*</label>
+        <select id="jobs" name="jobs" multiple>
+            <option value="job1">Software Engineer</option>
+            <option value="job2">Project Manager</option>
+            <option value="job3">HR Specialist</option>
+            <option value="job4">Data Analyst</option>
+        </select>
+
+        <input type="submit" value="Submit">
+
+        <div class="error" id="error_message"></div>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
